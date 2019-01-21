@@ -1,86 +1,41 @@
-<!doctype html>
-<html lang="fr">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="description" content="...">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Aztrek| nos déstinations</title>
-  <link rel="shortcut icon" href="favicon.ico">
-  <!-- lien polices et icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Ubuntu" rel="stylesheet">
+<?php
+require_once "model/database.php";
+require_once "functions.php";
 
-  <link rel="stylesheet" href="css/jquery.sidr.light.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.css">
-  <link rel="stylesheet" href="css/main.css">
+getHeader("Accueil","aztrek site de voyage ....");
+?>
 
-</head>
 
-<body class="home">
-
-  <header class="page-header">
+<header class="page-header">
 
     <nav class="top-nav container">
-      <div class="logo">
-        <a href="index.html" title="Accueil"><img src="images/0_bg_header/logo-Aztrek.png" Logo"></a>
-      </div>
+        <div class="logo">
+            <a href="index.php" title="Accueil"><img src="images/0_bg_header/logo-Aztrek.png" alt="Logo"></a>
+        </div>
 
-      
-      <ul class="menu-secondaire">
-        <li><a href="#">Qui sommes-nous ?</a></li>
 
-        <form class="search-form" action="#" method="get">
-          <input type="text" name="keywords" value="" placeholder="Rechercher">
-          <button type="submit" name="submit-btn"><img src="images/0_bg_header/picto_rechercher.png" alt="rechercher">
-            <span class="sr-only">Valider</span></button>
-        </form>
+        <ul class="menu-secondaire">
+            <li><a href="#">Qui sommes-nous ?</a></li>
 
-        <li> <a href="#">Contact</a></li>
+            <form class="search-form" action="#" method="get">
+                <input type="text" name="keywords" value="" placeholder="Rechercher">
+                <button type="submit" name="submit-btn"><img src="images/0_bg_header/picto_rechercher.png" alt="rechercher">
+                    <span class="sr-only">Valider</span></button>
+            </form>
 
-      </ul>
+            <li> <a href="#">Contact</a></li>
+
+        </ul>
     </nav>
 
     <div class="page-header-content">
 
-      <div class="container">
-
-        <nav class="main-nav">
-
-          <a class="burger" href="#sidr-main">
-            <img src="images/0_bg_header/lines-menu.png" alt=""></a>
-          </a>
-
-          <ul class="main-menu">
-            <li> <a href="index.html" title="Accueil" class="home-link">
-                <img src="images/0_bg_header/picto_home.png" alt="home">                
-              </a></li>
-
-            <li><a href="index.html#nos-destinations">Nos déstinations</a>
-            
-              <ul>
-                <li><a href="page_pays.html">MEXIQUE</a></li>
-                <li><a href="page2.html">GUATEMALA</a></li>
-                <li><a href="page3.html">SALVADOR</a></li>
-                <li><a href="page4.html">HONDURAS</a></li>
-                <li><a href="page5.html">COSTA RICA</a></li>
-            </ul>            
-            
-            
-            </li>
-
-            
-
-            <li><a href="#">Nos circuits</a></li>
 
 
-            <li> <a href="#">Le blog</a></li>
-            <li><a href="#">Mon espace personnel</a></li>
-          </ul>
+            <?php getMenu(); ?>
 
-        </nav>
+
 
         <h1>SPECIALISTE DU VOYAGE ECO TOURISME EN AMERIQUE CENTRALE</h1>
 
@@ -414,91 +369,14 @@
     <a href="#" class="btn">Lire tous nos avis</a>    
     <a href="#" class="btn">Laissez votre avis</a>
 
+
+
 </div>
   </section>
 
+<?php getFooter(); ?>
+
   
 
-  <footer class="footer-bottom">
-
-     <div class="container"> 
-
-      
-        <div class="footer">
-      <div class="infos-footer">
-          <img src="./images/5-footer/Aztrek_marron.png" alt="logo-Aztrek-marron">
-        <p>02.99.66.65.22</p>
-        <p>Société AZTREK
-          12 rue de Mayamania
-          35200 RENNES
-        </p>
-        <p>AZTREK- © DEMOISELLES & Co- 2018-19
-          Spécialiste du voyage éco tourisme en Amérique Centrale -</p>
-        <div class="copyright">
-          <p>Copyright - Mentions légales
-          </p>
-        </div>
-      </div  infos-footer> 
-    </div footer>
-
-    <div class="footer">
-      <div class="a-propos-footer">
-        <h5>A PROPOS</h5>
-        <p>Quelques mots</p>
-        <a href="#">Nos déstinations</a>
-        <p>Nominé du tourisme responsable 2017</p>
-        <a href="#"><img src="images/5-footer/loga-atr.png" alt="picto-atr"></a>
-
-      </div a-propos-footer> 
-      </div footer>
-
-      <div class="footer">
-      <div class="suivez-nous">
-          <h5>SUVEZ-NOUS</h5>
-        <ul>
-          <li><a class="btn-fb" href="#" title="Notre page Facebook"><img src="images/5-footer/ellipse-facebook.png" alt="fb"></a></li>
-          <li><a class="btn-instagram" href="#" title="Notre page instagram"><img src="images/5-footer/ellipse-instagram.png" alt="instagram"></a></li>
-          <li><a class="btn-blog" href="#" title="Notre blog"><img src="images/5-footer/blogger-letter-logotype-defonce.png" alt="blog"></a></li>
-          <li><a class="btn-you-tube" href="#" title="Notre chaine you tube"><img src="images/5-footer/youtube-logotype_defonce.png" alt="you-tube"></a></li>
-
-        </ul>
-      </div suivez-nous>
-
-    </div footer>
-    
-
-      <div class="footer">
-      <div class="newsletter">
-        <h5>NEWSLETTER</h5>
-        <div class="btn">
-          <a href="#" class="btn">Inscrivez-vous </a>
-        </div>
-        <div class="btn">
-          <a href="#" class="btn">Désinscrivez-vous </a>
-        </div>       
-        
-      </div newsletter>
-
-    </div footer>
-
-    </div> 
-
-  </footer>
-
-  <div class="container">
-    <a href="#" class="back-to-top"><img src="images/5-footer/go-back-arrow_bleu.png" alt="back-to-top"></a>
-  </div>
-
-
-
-
-</body>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery.sidr.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/scripts.js"></script>
-
-</body>
 
 </html>
