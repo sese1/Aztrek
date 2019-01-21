@@ -1,0 +1,27 @@
+.top-nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+
+
+.menu-secondaire{
+    display: flex;
+    align-items: center;
+  
+    
+}
+
+.search-form{
+    display: flex;
+    input{
+        display: none;
+        @media (min-width: $bp-medium) {
+            display: block;
+            width: 120px;
+        }
+    }
+}

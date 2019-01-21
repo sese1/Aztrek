@@ -1,0 +1,14 @@
+.dest-pays {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .pays {
+        padding: 0 10px;
+        margin-top: -15px;
+
+        @media (min-width: $bp-large) {
+            flex-basis: 25%;
+        }
+    }
+}

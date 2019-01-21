@@ -1,0 +1,25 @@
+// layout
+
+$max-width: 1200px;
+//    breakpoint :
+$bp-medium: 768px;
+$bp-large:992px;
+$marge:15px;
+
+// typos
+$font-default:'Ubuntu', sans-serif,
+'Open Sans', sans-serif;
+$font-title:'lato','Ubuntu', $font-default;
+
+// colors
+$blue: #144084;
+$marron: #94352a;
+$red: $marron;
+$bgblue: #A5CDE2;
+$jaune: #FEBA00;
+$light-brown: #E09565;
+$light-gray: #ccc;
+$dark-gray: rgb(114, 114, 114);
+
+$link-color: $blue;
+

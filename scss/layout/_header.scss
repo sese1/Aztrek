@@ -1,0 +1,95 @@
+
+
+
+
+.home .page-header-content {
+  background: url('../images/0_bg_header/bg_header.jpg') center;
+  background-size: cover;
+  min-height: 70vh;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+  }
+}
+
+.burger {
+  @media (min-width: $bp-medium) {
+    display: none;
+  }
+}
+
+.main-nav {
+  padding: 15px 0;
+}
+
+.main-menu {
+  display: none;
+
+  @media (min-width: $bp-medium) {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+
+    li a {
+      display: block;
+      font-size: 0.875rem;
+      padding: 0.25rem 0.5rem;
+      color: #fff;
+      position: relative;
+      margin: 0 0.75rem;
+      z-index: 1;
+      /* premier plan */
+    }
+
+    li a:not(.home-link)::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      /* trait */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      transition: 0.3s;
+      z-index: -1;
+    }
+
+    li a:hover {
+      color: $marron;
+      text-decoration: none;
+    }
+
+    li a:hover::after {
+      height: 100%;
+    }
+  }
+}
+
+// menu second niveau
+
+.main-menu>li {
+  position: relative;
+}
+
+.main-menu ul {
+  position: absolute;
+  z-index: 2;
+  width: 200px;
+  background-color: #ccc;
+  left: -9999px;
+}
+
+.main-menu>li:hover ul {
+  left: 0;
+}
+
+
+.header-dest {
+  margin-top: auto;
+  margin-bottom: 30px;
+  text-align: center;
+}

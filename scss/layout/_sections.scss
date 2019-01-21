@@ -1,0 +1,236 @@
+// section dest pays
+.pays h3 {
+    color: $blue;
+    text-align: center;
+}
+
+
+
+// section coups de coeur des voyageurs
+
+.coeur {
+
+    background: url('../images/2_coups_de_coeur/bg_coups_de_coeur.png') center;
+    background-size: cover;
+    min-height: 70vh;
+}
+
+.coeur {
+    .img {
+        position: relative;
+
+        .picto-coeur {
+            position: absolute;
+            width: auto;
+            bottom: 15px;
+            right: 15px;
+        }
+    }
+
+    .infos .picto-blog {
+        width: auto;
+        display: inline-block;
+    }
+
+    .infos {
+        text-align: right;
+        padding: 0 20px;
+    }
+}
+
+
+
+
+//======  section vos envies   =====//
+.vos-envies-container {
+    background: url('../images/3_vos_envies/bg_vos_envies.jpg') center;
+    background-size: cover;
+    min-height: 70vh;
+
+
+    .btn {
+        text-align: center;
+    }
+}
+
+.vos-envies-container {
+    color: #ffffff;
+}
+
+article.article-envies h3 {
+    color: #ffffff;
+    text-align: left;
+
+}
+
+h4 {
+    text-align: right;
+    font-style: italic;
+
+}
+
+
+
+
+.envies-123 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px 0;
+
+
+
+    .article-envies {
+        max-width: 394px;
+        padding: 0 15px;
+    }
+
+}
+
+
+
+// section tout le monde à la parole//
+
+.avis .btn{
+    display: flex;
+    justify-content: center;
+    padding :15px;
+    
+}
+
+.item {
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $bp-medium) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        .item-img, .item-infos{
+            flex-basis: 48%;
+        }
+    }
+}
+
+
+
+.item-infos p,
+h3 {
+    text-align: center;
+    padding: 10px 20px;
+    color: $blue;
+}
+
+s .interview {
+
+    @media (min-width: $bp-medium) {
+        .item {
+            display: flex;
+
+            &:nth-of-type(even) {
+                flex-direction: row-reverse;
+            }
+
+            .item-img {
+                flex-basis: 40%;
+            }
+
+            .item-infos {
+                flex-basis: 60%;
+            }
+        }
+    }
+}
+
+
+
+//========================= page sejour========================= //
+.main-circuit {
+    background-color: rgb(203, 227, 237);
+}
+
+.presentation {
+    padding: 10px;
+    justify-content: space-around;
+    padding-right: 200px;
+    text-align: justify;
+}
+
+#presentation {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.presentation p {
+    width: 600px,
+}
+
+.presentation ul li {
+    padding: 10px;
+}
+
+.description-sejour {
+    display: flex;
+    // position: absolute;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.description-sejour li img {
+    width: 40px;
+}
+
+.img-sejour-1 {
+    padding: 40px;
+}
+
+.img-sejour-1 {
+    padding-left: 100px;
+}
+
+// ========================= page pays======================//
+
+section-circuit {
+    background-color: #EFA05C;
+}
+
+.circuit {
+    display: flex;
+    flex-basis: 33%;
+    justify-content: space-around;
+    background-color: rgb(184, 209, 230);
+}
+
+.circuit img {
+    padding: 15px;
+}
+
+article {
+    position: relative;
+
+    .circuit-name {
+        position: absolute;
+        z-index: 9999;
+        color: white;
+    }
+}
+
+.circuit-name {
+    bottom: 15px;
+    left: 30px;
+}
+
+.section-circuit {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(184, 209, 230);
+
+    .bouton {
+        margin: 40px auto;
+    }
+}

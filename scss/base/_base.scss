@@ -1,0 +1,34 @@
+//  A mettre systematiquement , il rajoute au 1200( dans notre exemple) , les padding 
+
+* {
+    box-sizing: border-box;
+}
+
+
+// pour enlever les puces pour les navigations
+nav ul {
+    list-style: none;        
+    padding: 0;
+    margin: 0;
+}
+ ul{
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}

@@ -1,0 +1,36 @@
+
+
+
+
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Lato', sans-serif;
+
+h1{
+    color:#ffffff;
+}
+
+body{
+    font-family: $font-default;
+}
+h2{
+    text-align: center;
+}
+
+h1,h2,h3{
+    font-family: $font-title;
+}
+
+
+
+a{
+    color: $link-color;
+    text-decoration: none;
+    
+    // survol des liens
+    &:hover,&:focus{
+            // soulignement des liens qd on passe dessus 
+        text-decoration:underline;
+    }
+}
+

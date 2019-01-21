@@ -1,0 +1,15 @@
+
+// utiliser pour ts les projets 
+.btn a{
+    display:inline-block;
+    padding:.500rem 1rem;
+    background-color: $blue;
+    color:#fff;
+    border-radius:15px;
+    transition: .3S;
+
+    &:hover,&:focus{
+        background-color: darken($red,20%);
+        text-decoration :none;
+    }
+}
