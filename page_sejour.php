@@ -83,52 +83,34 @@ getHeader("Accueil","aztrek site de voyage ....");
 
         <h2>Nos départs</h2>
 
-<table>
 
- 
-    <tr>
-        <th>Du</th>
-        <th>Au</th>
-        <th>Prix</th>
-        <th>Départ Assuré<br> à partir de </th>
-        <th>Description de l'exemple</th>
-    </tr>
-    <tr>
-        <td>01/02/2019</td>
-        <td>15/02/2019</td>
-        <td>3090€</td>
-        <td>Assuré</td>
-        <td><a href="#">S'INSCRIRE</a></td>
-    </tr>
-    <tr>
-        <td>01/02/2019</td>
-        <td>15/02/2019</td>
-        <td>3090€</td>
-        <td>Assuré</td>
-        <td><a href="#">S'INSCRIRE</a></td>
-    </tr>
-    <tr>
-        <td>01/02/2019</td>
-        <td>15/02/2019</td>
-        <td>3090€</td>
-        <td>Assuré</td>
-        <td><a href="#">S'INSCRIRE</a></td>
-    </tr>
-    <tr>
-        <td>01/02/2019</td>
-        <td>15/02/2019</td>
-        <td>3090€</td>
-        <td>Assuré</td>
-        <td><a href="#">S'INSCRIRE</a></td>
-    </tr>
-    <tr>
-        <td>01/02/2019</td>
-        <td>15/02/2019</td>
-        <td>3090€</td>
-        <td>Assuré</td>
-        <td><a href="#">S'INSCRIRE</a></td>
-    </tr>
-</table>
+    <table>
+        <tr>
+            <th>Date de départ</th>
+            <th>Date de retour</th>
+            <th>Prix</th>
+            <th>Places restantes</th>
+            <th>Réservez dès maintenant</th>
+        </tr>
+        <tr>
+            <td>15/02/2019</td>
+            <td>15/02/2019</td>
+            <td>3090€</td>
+            <td>14</td>
+            <td><a href="#">S'INSCRIRE</a></td>
+        </tr>
+        <tr>
+            <td>15/02/2019</td>
+            <td>15/02/2019</td>
+            <td>3090€</td>
+            <td>7</td>
+            <td><a href="#">S'INSCRIRE</a></td>
+        </tr>
+    </table>
+
+
+
+
 
 </section >
 
@@ -137,20 +119,7 @@ getHeader("Accueil","aztrek site de voyage ....");
 
   <?php getFooter(); ?>
 
-  <div class="container">
-    <a href="#" class="back-to-top"><img src="images/5-footer/go-back-arrow_bleu.png" alt="back-to-top"></a>
-  </div>
 
 
 
 
-</body>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery.sidr.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/scripts.js"></script>
-
-</body>
-
-</html>
