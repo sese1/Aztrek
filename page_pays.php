@@ -2,6 +2,11 @@
 require_once "model/database.php";
 require_once "functions.php";
 
+$id = $_GET["id"];
+$destination = getOneEntity("destination", $id);
+$sejours = getAllSejoursByPays($id);
+
+
 getHeader("Accueil", "aztrek site de voyage ....");
 ?>
 
@@ -9,6 +14,8 @@ getHeader("Accueil", "aztrek site de voyage ....");
 <body class="page_pays">
 
 <header class="page-header">
+
+</header>
 
     <nav class="top-nav container">
         <div class="logo">
@@ -31,13 +38,13 @@ getHeader("Accueil", "aztrek site de voyage ....");
         </ul>
     </nav>
 
-    <?php getMenu(); ?>
+<?php getMenu(); ?>
 
     <h1>SPECIALISTE DU VOYAGE ECO TOURISME EN AMERIQUE CENTRALE</h1>
 
     <div class="header-dest">
 
-        <h2>MEXIQUE</h2>
+        <h2><?= $destination["titre"];?></h2>
 
 
     </div>
@@ -46,23 +53,17 @@ getHeader("Accueil", "aztrek site de voyage ....");
 
 <main>
     <section class="section-circuit">
-        <h2>Nos Séjours au Méxique</h2>
+        <h2>Nos Séjours :<?= $destination["titre"];?></h2>
 
         <div class="circuit">
-            <article id="premiere-place">
-                <p class="circuit-name">Les Trésors du Yucatan</p>
-
-                <a href="page_sejour.php" class="photo-concours"> <img src="uploads/1-guatemala-grande.jpg" alt="">
-                </a>
-
-            </article>
-            <article id="deuxieme-place">
-                <p class="circuit-name">Les mystérieuses cités d'or</p>
-
-                <a href="page_sejour.php" class="photo-concours"> <img src="uploads/2-salvador-grande.jpg" alt="">
-                </a>
-
-            </article>
+            <?php foreach ($sejours as $sejour) : ?>
+                <article id="premiere-place">
+                    <p class="circuit-name"><?= $sejour["titre"]; ?></p>
+                    <a href="page_sejour.php?id=<?= $sejour["id"]; ?>" class="photo-concours">
+                        <img src="uploads/<?= $sejour["image"]; ?>" alt="Sejour">
+                    </a>
+                </article>
+            <?php endforeach; ?>
 
 
         </div>
@@ -72,3 +73,6 @@ getHeader("Accueil", "aztrek site de voyage ....");
 
 
 <?php getFooter(); ?>
+
+
+

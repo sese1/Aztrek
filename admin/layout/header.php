@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__ . '/../../config/parameters.php';
 require_once __DIR__ . '/../security.php';
 ?>
@@ -22,10 +23,10 @@ require_once __DIR__ . '/../security.php';
     </head>
 
     <body>
-        <?php require_once __DIR__ . '/menu-top.php'; ?>
+                    <?php require_once __DIR__ . '/menu-top.php'; ?>
 
-        <div class="container-fluid">
-            <div class="row">
-                <?php require_once __DIR__ . '/menu-left.php'; ?>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <?php require_once __DIR__ . '/menu-left.php'; ?>
 
-                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">

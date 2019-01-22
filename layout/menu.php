@@ -1,6 +1,8 @@
 <?php
-require_once __DIR__. "/../config/parameters.php";
-require_once __DIR__. "/../model/database.php";
+require_once __DIR__ . "/../config/parameters.php";
+require_once __DIR__ . "/../functions.php";
+
+$user = getConnectedUser();
 
 $destinations = getAllEntities("destination");
 ?>
@@ -23,19 +25,28 @@ $destinations = getAllEntities("destination");
             <a href="index.php#nos-destinations">Nos déstinations</a>
             <ul>
                 <?php foreach ($destinations as $destination) : ?>
-                <li>
-                    <a href="page_pays.php?id=<?= $destination["id"]; ?>">
-                        <?= $destination["titre"]; ?>
-                    </a>
-                </li>
+                    <li>
+                        <a href="page_pays.php?id=<?= $destination["id"]; ?>">
+                            <?= $destination["titre"]; ?>
+                        </a>
+                    </li>
                 <?php endforeach; ?>
             </ul>
         </li>
 
         <li><a href="#">Nos circuits</a></li>
 
-        <li> <a href="#">Le blog</a></li>
-        <li><a href="#">Mon espace personnel</a></li>
+        <li><a href="#">Le blog</a></li>
+
+        <?php if (isset($user)) : ?>
+            <li><a href="#"><i class="fa fa-user"></i> <?= $user["email"]; ?></a></li>
+            <li><a href="<?= SITE_ADMIN . "logout"; ?>">Déconnexion</a></li>
+        <?php else: ?>
+
+            <li><a href="<?= SITE_ADMIN; ?>">Connexion</a></li>
+        <?php endif; ?>
     </ul>
 
 </nav>
+
+

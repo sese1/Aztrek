@@ -1,7 +1,7 @@
 <?php
 require_once '../../../model/database.php';
 
-$categories = getAllEntities("categorie");
+$detinations = getAllEntities("destination");
 
 require_once '../../layout/header.php';
 ?>
@@ -14,11 +14,11 @@ require_once '../../layout/header.php';
         <input type="text" name="titre" class="form-control" placeholder="Titre" required>
     </div>
     <div class="form-group">
-        <label>Catégorie</label>
-        <select name="categorie_id" class="form-control">
-            <?php foreach ($categories as $categorie) : ?>
-                <option value="<?php echo $categorie["id"]; ?>">
-                    <?php echo $categorie["libelle"]; ?>
+        <label>Destination</label>
+        <select name="destination_id" class="form-control">
+            <?php foreach ($detinations as $destination) : ?>
+                <option value="<?php echo $destination["id"]; ?>">
+                    <?php echo $destination["titre"]; ?>
                 </option>
             <?php endforeach; ?>
         </select>
@@ -33,7 +33,7 @@ require_once '../../layout/header.php';
     </div>
     <div class="form-group">
         <label>Description courte</label>
-        <input type="text" name="description_courte" class="form-control" placeholder="Description courte" required>
+        <input type="text" name="description" class="form-control" placeholder="Description " required>
     </div>
     <div class="form-group">
         <label>Nombre de couverts</label>

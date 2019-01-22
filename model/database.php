@@ -34,7 +34,7 @@ foreach ($files as $filepath) {
 function getOneEntity(string $table, int $id) :array  {
     global $connection;
 
-    $query = "SELECT *  FROM $table";
+    $query = "SELECT *  FROM $table WHERE id = :id";
 
     $stmt = $connection->prepare($query);
     $stmt->bindParam(":id", $id);

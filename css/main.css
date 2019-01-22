@@ -367,16 +367,6 @@ a {
   margin: 0 auto;
   padding: 0 15px; }
 
-.page_pays header {
-  background: url("../images/sejour/rectangle_photos_specialiste_du_voyage.jpg") center;
-  background-size: cover;
-  min-height: 70vh; }
-
-.page_sejour .page-header-content {
-  background: url("../images/0_bg_header/bg_header.jpg") center;
-  background-size: cover;
-  min-height: 70vh; }
-
 .home .page-header-content {
   background: url("../images/0_bg_header/bg_header.jpg") center;
   background-size: cover;

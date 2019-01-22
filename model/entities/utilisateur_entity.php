@@ -1,5 +1,4 @@
-
- <?php
+<?php
 
  function getUtilisateurByEmailMotDePasse(string $email, string $password)  {
      global $connection;
@@ -9,7 +8,6 @@
     FROM utilisateur 
     WHERE email = :email 
     AND mot_de_passe = SHA1(:password) 
-    
     ";
 
      $stmt = $connection->prepare($query);

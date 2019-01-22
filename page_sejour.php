@@ -3,11 +3,13 @@
 require_once "model/database.php";
 require_once "functions.php";
 
+$id = $_GET["id"];
+$sejour = getOneSejour($id);
+
 getHeader("Accueil","aztrek site de voyage ....");
 ?>
 
-$id = $_GET["id"];
-$sejour = getAllSejourByPays ($id);
+
 
 <body class="page_sejour">
 
