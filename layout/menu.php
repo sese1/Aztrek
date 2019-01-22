@@ -43,7 +43,8 @@ $destinations = getAllEntities("destination");
             <li><a href="<?= SITE_ADMIN . "logout"; ?>">Déconnexion</a></li>
         <?php else: ?>
 
-            <li><a href="<?= SITE_ADMIN; ?>">Connexion</a></li>
+            <li><a href="<?= SITE_ADMIN; ?>">connexion</a></li>
+            <li><a href="<?= SITE_URL . "create_account.php"; ?>"><i class="fa fa-user-plus"></i></a></li>
         <?php endif; ?>
     </ul>
 

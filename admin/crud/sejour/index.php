@@ -40,18 +40,18 @@ require_once '../../layout/header.php';
         <tr>
             <th>Titre</th>
             <th>Image</th>
-            <th>Catégorie</th>
+            <th>Destination</th>
             <th>Auteur</th>
             <th>Date de création</th>
             <th class="actions">Actions</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($recipes as $recipe) : ?>
+        <?php foreach ($sejours as $sejour : ?>
             <tr>
-                <td><?php echo $recipe['titre']; ?></td>
+                <td><?php echo $sejour['titre']; ?></td>
                 <td>
-                    <img src="../../../uploads/<?php echo $recipe['image']; ?>" class="img-thumbnail">
+                    <img src="../../../uploads/<?php echo $sejour['image']; ?>" class="img-thumbnail">
                 </td>
                 <td><?php echo $recipe['categorie']; ?></td>
                 <td><?php echo $recipe['pseudo']; ?></td>

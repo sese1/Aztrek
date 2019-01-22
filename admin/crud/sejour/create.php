@@ -31,26 +31,17 @@ require_once '../../layout/header.php';
         <label>Description</label>
         <textarea name="description" class="form-control"></textarea>
     </div>
+
     <div class="form-group">
-        <label>Description courte</label>
-        <input type="text" name="description" class="form-control" placeholder="Description " required>
-    </div>
-    <div class="form-group">
-        <label>Nombre de couverts</label>
-        <input type="number" name="couverts" class="form-control" required>
+        <label>Durée</label>
+        <input type="number" name="duree" class="form-control" required>
     </div>
     <div class="form-group">
-        <label>Temps de preparation</label>
-        <input type="time" name="temps_prepa" class="form-control" required>
+        <label>Difficulté</label>
+        <input type="time" name="difficulte" class="form-control" required>
     </div>
-    <div class="form-group">
-        <label>Temps de cuisson</label>
-        <input type="time" name="temps_cuisson" class="form-control" required>
-    </div>
-    <div class="form-group form-check">
-        <input type="checkbox" name="publie" class="form-check-input" required>
-        <label>Publié ?</label>
-    </div>
+
+
     <button type="submit" class="btn btn-success">
         <i class="fa fa-check"></i>
         Ajouter

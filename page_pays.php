@@ -17,43 +17,41 @@ getHeader("Accueil", "aztrek site de voyage ....");
 
 </header>
 
-    <nav class="top-nav container">
-        <div class="logo">
-            <a href="index.php" title="Accueil"><img src="images/0_bg_header/logo-Aztrek.png" Logo></a>
-        </div>
+<nav class="top-nav container">
+    <div class="logo">
+        <a href="index.php" title="Accueil"><img src="images/0_bg_header/logo-Aztrek.png" Logo></a>
+    </div>
 
 
-        <ul class="menu-secondaire">
-            <li><a href="#">Qui sommes-nous ?</a></li>
+    <ul class="menu-secondaire">
+        <li><a href="#">Qui sommes-nous ?</a></li>
 
-            <form class="search-form" action="#" method="get">
-                <input type="text" name="keywords" value="" placeholder="Rechercher">
-                <button type="submit" name="submit-btn"><img src="images/0_bg_header/picto_rechercher.png"
-                                                             alt="rechercher">
-                    <span class="sr-only">Valider</span></button>
-            </form>
+        <form class="search-form" action="#" method="get">
+            <input type="text" name="keywords" value="" placeholder="Rechercher">
+            <button type="submit" name="submit-btn"><img src="images/0_bg_header/picto_rechercher.png"
+                                                         alt="rechercher">
+                <span class="sr-only">Valider</span></button>
+        </form>
 
-            <li><a href="#">Contact</a></li>
+        <li><a href="#">Contact</a></li>
 
-        </ul>
-    </nav>
+    </ul>
+</nav>
 
 <?php getMenu(); ?>
 
-    <h1>SPECIALISTE DU VOYAGE ECO TOURISME EN AMERIQUE CENTRALE</h1>
+<h1>SPECIALISTE DU VOYAGE ECO TOURISME EN AMERIQUE CENTRALE</h1>
 
-    <div class="header-dest">
+<div class="header-dest">
 
-        <h2><?= $destination["titre"];?></h2>
+    <h2><?= $destination["titre"]; ?></h2>
 
 
-    </div>
-
-</header>
+</div>
 
 <main>
     <section class="section-circuit">
-        <h2>Nos Séjours :<?= $destination["titre"];?></h2>
+        <h2>Nos Séjours :<?= $destination["titre"]; ?></h2>
 
         <div class="circuit">
             <?php foreach ($sejours as $sejour) : ?>

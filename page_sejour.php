@@ -47,7 +47,7 @@ getHeader("Accueil","aztrek site de voyage ....");
 
         <div class="header-dest">
 
-          <h2>Le trésor du YUCATAN</h2>
+          <h2><?= $sejour["titre"]; ?></h2>
 
 
          
@@ -62,20 +62,12 @@ getHeader("Accueil","aztrek site de voyage ....");
   <main class="main-circuit">
     <section id="presentation">
         <article class="presentation">
-            <h2>Trésors du Yucatán</h2>
-            <p>Le Mexique, et en particulier le Yucatán, est une terre de rêve. Elle y mêle quelques-uns des plus
-                beaux sites mayas, riche patrimoine culturel, et des trésors naturels, comme la mer des Caraïbes ou
-                les cenotes, ces puits souterrains ou à ciel ouvert, trous d’eau qui parsèment le plateau calcaire
-                du Yucatán. L'âme indienne y est bien vivante, celle de la civilisation raffinée des Mayas à leur
-                grande époque et bien sûr, mais également celle des Mayas d’aujourd’hui, qui ont gardé leurs us et
-                coutumes. Des sites mayas incontournables et hors sentiers battus, un délicieux cocktail
-                d’écotourisme et de
-                découverte culturelle. Palenque et les sites de la forêt lacandone au Chiapas, un itinéraire
-                ponctué de baignades en mer, en cenote et en lagune.</p>
+            <h2><?= $sejour["titre"]; ?></h2>
+            <p><?= $sejour["description"]; ?></p>
            <ul class="description-sejour">
                 <li><a href="#"><i class="far fa-calendar-alt"></i></a> 6 jours</li>
             <li><a href="#"><i class="fas fa-euro-sign"></i></a> à partir de 3290 €</li>
-            <li><a href="#"><i class="fas fa-signal"></i></a> Niveau 1/5</li>
+            <li><a href="#"><i class="fas fa-signal"></i></a> Niveau <?= $sejour["difficulte"]; ?>/5</li>
             </ul> 
            
             
@@ -83,7 +75,7 @@ getHeader("Accueil","aztrek site de voyage ....");
         </article>
         
     <aside class="img-sejour-1 container">
-        <img src="./images/sejour/cenotes.jpg" alt="cenotes">
+        <img src="uploads/<?= $sejour["image"]; ?>" alt="cenotes">
     </aside>
 </main>
 

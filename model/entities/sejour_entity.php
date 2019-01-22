@@ -32,19 +32,15 @@ function getOneSejour(int $id): array
 
 
     $query = "
-SELECT
-sejour.*,
-DATE_FORMAT(sejour.date_depart,'%d-%m-%Y') AS date_depart_format,
-destination.titre AS destination
-
-
-FROM sejour
-INNER JOIN destination ON sejour.destination_id = destination.id
-INNER JOIN utilisateur  ON sejour.utilisateur_id = utilisateur.id
-
-
-
-";
+    SELECT
+        sejour.*,
+        destination.titre AS destination,
+        difficulte.niveau AS difficulte
+    FROM sejour
+    INNER JOIN destination ON sejour.destination_id = destination.id
+    INNER JOIN difficulte ON sejour.difficulte_id = difficulte.id
+    WHERE sejour.id = :id
+    ";
 
 
     $stmt = $connection->prepare($query);
