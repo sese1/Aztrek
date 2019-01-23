@@ -5,6 +5,7 @@ require_once "functions.php";
 
 $id = $_GET["id"];
 $sejour = getOneSejour($id);
+$departs = getAllDepartBySejour($id);
 
 getHeader("Accueil","aztrek site de voyage ....");
 ?>
@@ -65,9 +66,9 @@ getHeader("Accueil","aztrek site de voyage ....");
             <h2><?= $sejour["titre"]; ?></h2>
             <p><?= $sejour["description"]; ?></p>
            <ul class="description-sejour">
-                <li><a href="#"><i class="far fa-calendar-alt"></i></a> 6 jours</li>
-            <li><a href="#"><i class="fas fa-euro-sign"></i></a> à partir de 3290 €</li>
-            <li><a href="#"><i class="fas fa-signal"></i></a> Niveau <?= $sejour["difficulte"]; ?>/5</li>
+                <li><a href="#"><i class="far fa-calendar-alt"></i></a><?= $sejour["duree"]; ?> jours</li>
+            <li><a href="#"><i class="fas fa-euro-sign"></i></a> à partir de <?= $sejour["prix_indicatif"]; ?>€</li>
+            <li><a href="#"><i class="fas fa-signal"></i></a>  <?= $sejour["difficulte_libelle"]; ?> (Niveau <?= $sejour["difficulte_niveau"]; ?>/5)</li>
             </ul> 
            
             
@@ -92,20 +93,15 @@ getHeader("Accueil","aztrek site de voyage ....");
             <th>Places restantes</th>
             <th>Réservez dès maintenant</th>
         </tr>
-        <tr>
-            <td>15/02/2019</td>
-            <td>15/02/2019</td>
-            <td>3090€</td>
-            <td>14</td>
-            <td><a href="#">S'INSCRIRE</a></td>
-        </tr>
-        <tr>
-            <td>15/02/2019</td>
-            <td>15/02/2019</td>
-            <td>3090€</td>
-            <td>7</td>
-            <td><a href="#">S'INSCRIRE</a></td>
-        </tr>
+        <?php foreach ($departs as $depart) : ?>
+            <tr>
+                <td><?= $depart["date_depart_format"]; ?></td>
+                <td><?= $depart["date_retour_format"]; ?></td>
+                <td><?= $depart["prix"]; ?> €</td>
+                <td>14</td>
+                <td><a href="#">S'INSCRIRE</a></td>
+            </tr>
+        <?php endforeach; ?>
     </table>
 
 

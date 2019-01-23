@@ -12,7 +12,7 @@ require_once '../../layout/header.php';
 <form action="update_query.php" method="POST">
     <div class="form-group">
         <label>titre</label>
-        <input type="text" name="libelle" value="<?php echo $destination["titre"]; ?>" class="form-control" placeholder="libellé" required>
+        <input type="text" name="titre" value="<?php echo $destination["titre"]; ?>" class="form-control" placeholder="titre" required>
     </div>
     <input type="hidden" name="id" value="<?php echo $id; ?>"> 
     <button type="submit" class="btn btn-success">

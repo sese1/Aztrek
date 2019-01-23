@@ -9,14 +9,14 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php echo isActive("/crud/recette/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/recette/">
-                    <i class="fa fa-cutlery"></i>
-                    Recettes
+                <a class="nav-link <?php echo isActive("/crud/sejour/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/sejour/">
+                    <i class="fa fa-suitcase"></i>
+                    Séjour
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link <?php echo isActive("/crud/destination/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/destination/">
-                    <i class="fa fa-book"></i>
+                    <i class="fa fa-globe"></i>
                     Destinations
                 </a>
             </li>

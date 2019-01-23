@@ -1,12 +1,13 @@
 <?php
 require_once '../../../model/database.php';
 
-$detinations = getAllEntities("destination");
+$destinations = getAllEntities("destination");
+$difficulte = getAllEntities("difficulte");
 
 require_once '../../layout/header.php';
 ?>
 
-<h1>Ajout d'une photo</h1>
+<h1>Ajout d'un Séjour</h1>
 
 <form action="create_query.php" method="POST" enctype="multipart/form-data">
     <div class="form-group">
@@ -16,7 +17,7 @@ require_once '../../layout/header.php';
     <div class="form-group">
         <label>Destination</label>
         <select name="destination_id" class="form-control">
-            <?php foreach ($detinations as $destination) : ?>
+            <?php foreach ($destinations as $destination) : ?>
                 <option value="<?php echo $destination["id"]; ?>">
                     <?php echo $destination["titre"]; ?>
                 </option>
@@ -38,8 +39,20 @@ require_once '../../layout/header.php';
     </div>
     <div class="form-group">
         <label>Difficulté</label>
-        <input type="time" name="difficulte" class="form-control" required>
+        <select name="difficulte_id" class="form-control">
+            <?php foreach ($difficulte as $difficulte) : ?>
+                <option value="<?php echo $difficulte["id"]; ?>">
+                    <?php echo $difficulte["niveau"]; ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
     </div>
+    <div class="form-group">
+        <label>Prix</label>
+        <input type="number" name="prix_indicatif" class="form-control" required>
+    </div>
+
+
 
 
     <button type="submit" class="btn btn-success">

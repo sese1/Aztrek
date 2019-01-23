@@ -3,6 +3,7 @@ require_once '../../../model/database.php';
 
 $destinations = getAllEntities("destination");
 
+
 $error_msg = null;
 if (isset($_GET['errcode'])) {
     $errcode = $_GET['errcode'];
