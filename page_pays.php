@@ -53,6 +53,8 @@ getHeader("Accueil", "aztrek site de voyage ....");
     <section class="section-circuit">
         <h2>Nos Séjours :<?= $destination["titre"]; ?></h2>
 
+        <?php if (count($sejours) > 0) : ?>
+
         <div class="circuit">
             <?php foreach ($sejours as $sejour) : ?>
                 <article id="premiere-place">
@@ -62,9 +64,13 @@ getHeader("Accueil", "aztrek site de voyage ....");
                     </a>
                 </article>
             <?php endforeach; ?>
-
-
         </div>
+
+
+        <?php else :  ?>
+        <p>Pas de séjour actuellement, patience...</p>
+        <?php endif; ?>
+
         <a href="page_sejour.php" class="bouton">JE DECOUVRE</a>
     </section>
 </main>

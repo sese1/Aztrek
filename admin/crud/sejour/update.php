@@ -37,7 +37,7 @@ require_once '../../layout/header.php';
             <label>Catégorie</label>
             <select name="categorie_id" class="form-control">
                 <?php foreach ($liste_destinations as $destination) : ?>
-                    <?php $selected = ($destination["id"] == $photo["categorie_id"]) ? "selected" : ""; ?>
+                    <?php $selected = ($destination["id"] == $photo["destination_id"]) ? "selected" : ""; ?>
                     <option value="<?php echo $destination["id"]; ?>" <?php echo $selected; ?>>
                         <?php echo $destination["titre"]; ?>
                     </option>
