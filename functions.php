@@ -29,7 +29,7 @@ function getConnectedUser()
  * @param string $title Titre de la page
  * @param string $description MetaDescription de la page
  */
-function getHeader(string $title, string $description, array $stylesheets = [])
+function getHeader(string $title, string $description, array $stylesheets = [], $body_class = '')
 {
     require_once 'layout/header.php';
 }
