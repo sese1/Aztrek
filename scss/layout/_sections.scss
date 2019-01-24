@@ -91,18 +91,34 @@ h4 {
 
 // section tout le monde à la parole//
 
-.avis .btn{
+
+.tout-le-monde-container{
+    background: url('../images/2_coups_de_coeur/bg_coups_de_coeur.png') center;
+    background-size: cover;
+    min-height: 70vh;
+
+
+}
+
+.avis {
     display: flex;
     justify-content: center;
-    padding :15px;
-    
+    padding :30px;
+    .btn a{
+        text-decoration: none;
+
+    justify-content: space-around;
+        margin: 10px    ;
+
+    }
 }
 
 .item {
-    border-width: 1px 1px 1px 1px;
+    border-width: 5px 5px 5px 5px;
     border-style: solid;
-    border-color: black;
-    margin: 10px;
+    border-color: $blue;
+    border-radius: 10px;
+    margin: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;

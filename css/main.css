@@ -567,16 +567,26 @@ h4 {
     max-width: 394px;
     padding: 0 15px; }
 
-.avis .btn {
+.tout-le-monde-container {
+  background: url("../images/2_coups_de_coeur/bg_coups_de_coeur.png") center;
+  background-size: cover;
+  min-height: 70vh; }
+
+.avis {
   display: flex;
   justify-content: center;
-  padding: 15px; }
+  padding: 30px; }
+  .avis .btn a {
+    text-decoration: none;
+    justify-content: space-around;
+    margin: 10px; }
 
 .item {
-  border-width: 1px 1px 1px 1px;
+  border-width: 5px 5px 5px 5px;
   border-style: solid;
-  border-color: black;
-  margin: 10px;
+  border-color: #144084;
+  border-radius: 10px;
+  margin: 30px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -678,71 +688,68 @@ article {
     background-color: #451913;
     text-decoration: none; }
 
-.owl-carousel {
-  background-color: #ccc;
-  padding: 80px 40px 60px; }
-  .owl-carousel .item {
+.owl-carousel .item {
+  display: flex;
+  flex-direction: column-reverse; }
+  @media (min-width: 768px) {
+    .owl-carousel .item {
+      flex-direction: row; } }
+  @media (min-width: 992px) {
+    .owl-carousel .item {
+      padding: 80px 60px; } }
+.owl-carousel .item-infos {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .owl-carousel .item-infos {
+      flex-basis: 33.33%; } }
+  .owl-carousel .item-infos h2 {
+    font-size: 2rem;
+    margin: 0; }
+  .owl-carousel .item-infos h3 {
+    margin-top: .5rem;
+    color: #727272;
+    text-transform: uppercase;
     display: flex;
-    flex-direction: column-reverse; }
-    @media (min-width: 768px) {
-      .owl-carousel .item {
-        flex-direction: row; } }
-    @media (min-width: 992px) {
-      .owl-carousel .item {
-        padding: 80px 60px; } }
-  .owl-carousel .item-infos {
-    display: flex;
-    flex-direction: column; }
-    @media (min-width: 768px) {
-      .owl-carousel .item-infos {
-        flex-basis: 33.33%; } }
-    .owl-carousel .item-infos h2 {
-      font-size: 2rem;
-      margin: 0; }
-    .owl-carousel .item-infos h3 {
-      margin-top: .5rem;
-      color: #727272;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center; }
-      .owl-carousel .item-infos h3::before {
-        content: '';
-        display: inline-block;
-        width: 0.75rem;
-        height: 0.75rem;
-        border-radius: 50%;
-        background-color: #727272;
-        margin-right: 0.75rem; }
-    .owl-carousel .item-infos p {
-      margin-top: 0; }
-    .owl-carousel .item-infos .btn {
-      align-self: flex-end; }
-  .owl-carousel .item-img {
-    margin-bottom: 2rem; }
-    @media (min-width: 768px) {
-      .owl-carousel .item-img {
-        flex-basis: 66.66%;
-        padding-left: 30px; } }
-  .owl-carousel .owl-nav button {
-    position: absolute;
-    top: 15px; }
-    @media (min-width: 992px) {
-      .owl-carousel .owl-nav button {
-        top: calc(50% - 1.5rem); } }
-    .owl-carousel .owl-nav button.owl-prev {
-      left: 15px;
-      font-size: 0; }
-    .owl-carousel .owl-nav button.owl-next {
-      right: 15px;
-      font-size: 0; }
-  .owl-carousel .owl-nav button::before {
-    display: inline-block;
-    font-family: "Font Awesome 5 Free";
-    font-size: 3rem;
-    color: white; }
-  .owl-carousel .owl-nav .owl-prev::before {
-    content: '\f359'; }
-  .owl-carousel .owl-nav .owl-next::before {
-    content: '\f35a'; }
+    align-items: center; }
+    .owl-carousel .item-infos h3::before {
+      content: '';
+      display: inline-block;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background-color: #727272;
+      margin-right: 0.75rem; }
+  .owl-carousel .item-infos p {
+    margin-top: 0; }
+  .owl-carousel .item-infos .btn {
+    align-self: flex-end; }
+.owl-carousel .item-img {
+  margin-bottom: 2rem; }
+  @media (min-width: 768px) {
+    .owl-carousel .item-img {
+      flex-basis: 66.66%;
+      padding-left: 30px; } }
+.owl-carousel .owl-nav button {
+  position: absolute;
+  top: 15px; }
+  @media (min-width: 992px) {
+    .owl-carousel .owl-nav button {
+      top: calc(50% - 1.5rem); } }
+  .owl-carousel .owl-nav button.owl-prev {
+    left: 15px;
+    font-size: 0; }
+  .owl-carousel .owl-nav button.owl-next {
+    right: 15px;
+    font-size: 0; }
+.owl-carousel .owl-nav button::before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-size: 3rem;
+  color: white; }
+.owl-carousel .owl-nav .owl-prev::before {
+  content: '\f359'; }
+.owl-carousel .owl-nav .owl-next::before {
+  content: '\f35a'; }
 
 /*# sourceMappingURL=main.css.map */
