@@ -29,7 +29,7 @@ getHeader($destination["titre"] , "aztrek site de voyage ....", [], 'page-pays')
 
 
         <?php else : ?>
-            <p>Pas de séjour actuellement, patience...</p>
+            <p>Pas de séjour actuellement, on revient très vite !!!</p>
         <?php endif; ?>
 
         <a href="page_sejour.php?id=<?= $sejour["id"]; ?>" class="bouton">JE DECOUVRE</a>

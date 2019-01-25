@@ -55,9 +55,9 @@ getHeader($sejour["titre"], "aztrek site de voyage ....", [], 'page-sejour');
                         <td>plus de place</td>
                     <?php endif; ?>
                     <?php if ($depart["places"] > 0): ?>
-                        <td><a class="btn" href="#">S'INSCRIRE</a></td>
+                        <td><a class="btn" href="#">Je m'inscris</a></td>
                     <?php else : ; ?>
-                        <td><a href="#">EPUISE</a></td>
+                        <td><a href="#">Plus aucune place disponible, Revenez plus tard ! </a></td>
                     <?php endif; ?>
                 </tr>
             <?php endforeach; ?>

@@ -5,7 +5,7 @@
             <li class="nav-item">
                 <a class="nav-link <?php echo isActive("/admin/", true) ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>">
                     <i class="fa fa-home"></i>
-                    Dashboard <span class="sr-only">(current)</span>
+                    Accueil <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
